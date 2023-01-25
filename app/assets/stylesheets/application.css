@@ -1,15 +1,92 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*,
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.home-page {
+  width: 100%;
+}
+
+.home-page a:link {
+  text-decoration: none;
+}
+
+.user-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.display-photo {
+  width: 100px;
+}
+
+.username,
+.no-of-posts {
+  color: black;
+}
+
+.all-posts {
+  text-align: center;
+  width: 150px;
+}
+
+.see-all-posts {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.all-posts a:link {
+  text-decoration: none;
+}
+
+.user-post-card {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+.user-posts a:link {
+  text-decoration: none;
+}
+
+.post-details,
+.post-comments {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.comments {
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.pagination {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px black;
+}
