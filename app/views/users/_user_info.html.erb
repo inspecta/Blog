@@ -1,0 +1,14 @@
+<div class="user-home">
+  <div class="user-photo">
+    <%= image_tag(user.photo, :alt => "User profile photo.", :class => "display-photo") %>
+  </div>
+
+  <div class="user-details">
+    <h2 class="username">
+      <%= user.name %>
+    </h2>
+    <p class="no-of-posts">
+      Number of posts: <%= user.posts_counter %>
+    </p>
+  </div>
+</div>
