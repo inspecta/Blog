@@ -1,3 +1,21 @@
-<h1>User post page</h2>
+<div class="post-container">
+  <div class="post-details border">
+    <div class="post-header">
+      <h3>
+        Post #<%= @post.id %> by <%= @user.name %>
+      </h3>
+      <p>
+        Comments: <%= @comments.size %> , Likes: <%= @likes.size %>
+      </p>
+    </div>
+    <p>
+      <%= @post.text %>
+    </p>
+  </div>
 
-<p>Details of a specific post of a user!</p>
+  <div class="post-comments border">
+    <% @comments.each do |comment| %>
+      <p><%= comment.author.name %>: <%= comment.text %></p>
+    <% end %>
+  </div>
+</div>

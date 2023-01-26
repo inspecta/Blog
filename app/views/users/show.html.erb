@@ -1,3 +1,25 @@
-<h1>User details page</h1>
+<div class="user-show-post">
+  <%= render partial: "user_info", locals: {user: @user} %>
+  <div class="bio-post">
+    <div class="border bio">
+      <h3>Bio</h3>
+      <p class="bio-text">
+        <%= @user.bio %>
+      </p>
+    </div>
 
-<p>Details of the user which includes Bio and Posts</p>
+    <div class="user-posts">
+      <% @user.most_recent_posts.each do |post| %>
+        <%= link_to user_post_path(@user.id, post.id) do %>
+          <%= render partial: "user_post_card", locals: {post: post} %>
+        <% end %>
+      <% end %>
+    </div>
+  <div>
+
+  <div class="all-posts">
+      <%= link_to user_posts_path(@user.id) do %>
+        <p class="see-all-posts">See all posts</p>
+      <% end %>
+  </div>
+</div>
