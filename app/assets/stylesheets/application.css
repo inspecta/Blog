@@ -3,6 +3,11 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.border {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
 .body {
   display: flex;
   flex-direction: column;
@@ -24,7 +29,10 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  width: 70%;
+  gap: 2em;
+  padding-bottom: 10px;
+  margin: auto;
 }
 
 .display-photo {
@@ -39,6 +47,7 @@ html {
 .all-posts {
   text-align: center;
   width: 150px;
+  margin: auto;
 }
 
 .see-all-posts {
@@ -65,7 +74,6 @@ html {
 
 .post-details,
 .post-comments {
-  border: 2px solid black;
   padding: 10px;
   border-radius: 5px;
   color: black;
@@ -73,14 +81,18 @@ html {
 }
 
 .comments {
-  border: 2px solid black;
-  padding: 10px;
-  margin-bottom: 10px;
+  margin: 10px auto 10px auto;
+  width: 100%;
+}
+
+.comments > p {
+  padding: 5px;
 }
 
 .post-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1em;
 }
 
@@ -89,4 +101,53 @@ html {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px black;
+}
+
+.user-photo {
+  padding: 5px;
+  width: 100px;
+}
+
+.user-details {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.user-show-post {
+  width: 100%;
+}
+
+.bio {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.bio-post {
+  width: 70%;
+  margin: auto;
+}
+
+.user-specific-post {
+  width: 100%;
+}
+
+.user-posts {
+  width: 100%;
+}
+
+.user-post-comments {
+  width: 70%;
+}
+
+.post-info {
+  width: 70%;
+  margin: auto;
+}
+
+.post-container {
+  width: 70%;
+  margin: auto;
 }
