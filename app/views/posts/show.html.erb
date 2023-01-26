@@ -1,9 +1,9 @@
 <div class="post-container">
-  <div class="post-details">
+  <div class="post-details border">
     <div class="post-header">
-      <h5>
+      <h3>
         Post #<%= @post.id %> by <%= @user.name %>
-      </h5>
+      </h3>
       <p>
         Comments: <%= @comments.size %> , Likes: <%= @likes.size %>
       </p>
@@ -13,7 +13,7 @@
     </p>
   </div>
 
-  <div class="post-comments">
+  <div class="post-comments border">
     <% @comments.each do |comment| %>
       <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>

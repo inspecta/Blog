@@ -1,11 +1,11 @@
-<div>
+<div class="user-specific-post">
   <%= render partial: "users/user_info", locals: {user: @user} %>
 
-  <div>
+  <div class="post-info">
     <% @posts.each do |post| %>
       <%= render partial: "users/user_post_card", locals: {post: post} %>
 
-      <div class="comments">
+      <div class="comments border">
         <% post.most_recent_comments.each do |comment| %>
           <p><%= comment.author.name %>: <%= comment.text %></p>
         <% end %>
