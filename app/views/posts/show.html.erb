@@ -18,4 +18,17 @@
       <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>
   </div>
+
+  <div class="comment-like">
+    <div class="comment">
+      <%= link_to 'Comment', new_user_post_comment_path(@user, @post) %>
+    </div>
+    
+    <div>
+      <%= form_with url: user_post_likes_path(@post.author, @post), method: :post do |form| %>
+        <%= form.submit "Like", class:"like-btn"%>
+      <% end %>
+    </div>
+  </div>
+
 </div>

@@ -1,0 +1,27 @@
+<div>
+  <%= form_with model: @post, url: user_posts_path do |form| %>
+    <div>
+      <%= form.label :title%>
+      <%= form.text_field :title, placeholder: "Enter title...", required: true %>
+
+      <ul>
+        <% @post.errors.full_messages_for(:title).each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div>
+      <%= form.label :text, "Write post" %>
+      <%= form.text_area :text, class: "post-text", required: true %>
+
+      <ul>
+        <% @post.errors.full_messages_for(:text).each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <%= form.submit  "Create Post" %>
+  <% end %>
+</div>
