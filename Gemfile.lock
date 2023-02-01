@@ -83,12 +83,20 @@ GEM
       xpath (~> 3.2)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     date (3.3.3)
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     erubi (1.12.0)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
     globalid (1.0.1)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -233,7 +241,9 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  database_cleaner
   debug
+  factory_bot
   importmap-rails
   jbuilder
   pg (~> 1.1)
