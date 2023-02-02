@@ -1,6 +1,6 @@
 *,
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .header {
@@ -186,3 +186,58 @@ html {
   background-color: rgb(0, 255, 170);
   color: rgb(56, 56, 56);
 }
+
+.new-post {
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.new-post > p {
+  padding: 10px;
+}
+
+.new-post > a {
+  text-decoration: none;
+  border: 2px solid black;
+  color: #000;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.new-post > a:hover {
+  background-color: rgb(69, 69, 69);
+  color: #fff;
+}
+
+/* 
+  Create Post
+*/
+.create-post {
+  width: 70%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.add-post-btn > input {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px black;
+  outline: 0;
+  cursor: pointer;
+}
+
+/* 
+  * Registeration form
+*/
+
