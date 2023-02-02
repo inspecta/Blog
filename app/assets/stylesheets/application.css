@@ -241,3 +241,53 @@ html {
   * Registeration form
 */
 
+.register,
+.login-form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+#new_user {
+  width: 70%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.field > label {
+  font-size: 1.1em;
+}
+
+.field > input {
+  padding: 10px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions > input {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.login-btn {
+  padding: 20px;
+}
+
+.login-btn > a {
+  background-color: aquamarine;
+  padding: 10px;
+  border: 1px solid blue;
+  text-decoration: none;
+}
