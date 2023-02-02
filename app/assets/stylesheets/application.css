@@ -1,6 +1,6 @@
 *,
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .header {
@@ -19,6 +19,41 @@ html {
   align-items: center;
   width: 100%;
   padding-top: 50px;
+}
+
+.login-btn {
+  padding: 20px;
+  display: flex;
+  gap: 1em;
+}
+
+.login-btn > a {
+  padding: 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: #000;
+}
+
+.new-post > a {
+  text-decoration: none;
+  border: 2px solid black;
+  color: #000;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.login-btn > a:hover {
+  background-color: rgb(217, 217, 217);
+}
+
+.new-post > p {
+  padding: 10px;
+}
+
+.new-post > a:hover {
+  background-color: rgb(69, 69, 69);
+  color: #fff;
 }
 
 .home-page {
@@ -185,4 +220,100 @@ html {
 .like-btn:hover {
   background-color: rgb(0, 255, 170);
   color: rgb(56, 56, 56);
+}
+
+.new-post {
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+/*
+  Create Post
+*/
+.create-post {
+  width: 70%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.add-post-btn > input {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px black;
+  outline: 0;
+  cursor: pointer;
+}
+
+/*
+  * Registeration form
+*/
+
+.register {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.login-form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-btn > input {
+  width: 100%;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px #000;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #000;
+  font-size: 1.1em;
+}
+
+#new_user {
+  width: 70%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.field > label {
+  font-size: 1.1em;
+}
+
+.field > input {
+  padding: 10px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions > input {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 1em;
 }

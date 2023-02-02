@@ -1,0 +1,19 @@
+<div class="login-form">
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true,
+      autocomplete: "email", placeholder: "Username" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password",
+      placeholder: "Password" %>
+    </div>
+
+    <div class="signin-btn">
+      <%= f.submit "Log in" %>
+    </div>
+  <% end %>
+    
+</div>
