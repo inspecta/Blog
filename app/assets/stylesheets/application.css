@@ -3,6 +3,10 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.header {
+  text-align: center;
+}
+
 .border {
   border: 2px solid black;
   border-radius: 5px;
@@ -66,6 +70,7 @@ html {
   padding: 10px;
   border-radius: 5px;
   color: black;
+  margin-bottom: 10px;
 }
 
 .user-posts a:link {

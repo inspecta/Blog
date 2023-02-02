@@ -1,24 +1,16 @@
 class PostsController < ApplicationController
-  skip_before_action :verify_authenticity_token
-
   def index
     user_id = params[:user_id]
-    @user = User.find(user_id)
-    @posts = @user.posts.order(created_at: :desc)
+    @user = User.includes(posts: [:comments]).find(user_id)
   end
 
   def show
-    # URL parameters
-    user_id = params[:user_id]
+    author_id = params[:user_id]
     post_id = params[:id]
-
-    @user = User.find(user_id)
-    @post = @user.posts.find(post_id)
-    @comments = @post.comments.order(created_at: :desc)
-    @likes = @post.likes.all
+    @user = User.find(author_id)
+    @post = @user.posts.includes(:comments, :likes).find(post_id)
   end
 
-  # Create a new post
   def new
     @post = Post.new
   end

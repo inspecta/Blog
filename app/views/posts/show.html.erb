@@ -5,7 +5,7 @@
         Post #<%= @post.id %> by <%= @user.name %>
       </h3>
       <p>
-        Comments: <%= @comments.size %> , Likes: <%= @likes.size %>
+        Comments: <%= @post.comments_counter %> , Likes: <%= @post.likes_counter %>
       </p>
     </div>
     <p>
@@ -14,7 +14,7 @@
   </div>
 
   <div class="post-comments border">
-    <% @comments.each do |comment| %>
+    <% @post.comments.each do |comment| %>
       <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>
   </div>
