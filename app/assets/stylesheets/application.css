@@ -23,13 +23,19 @@ html {
 
 .login-btn {
   padding: 20px;
+  display: flex;
+  gap: 1em;
 }
 
 .login-btn > a {
-  background-color: aquamarine;
   padding: 10px;
-  border: 1px solid blue;
+  border: 1px solid black;
   text-decoration: none;
+  color: #000;
+}
+
+.login-btn > a:hover {
+  background-color: rgb(217, 217, 217);
 }
 
 .new-post > p {
@@ -252,8 +258,7 @@ html {
   * Registeration form
 */
 
-.register,
-.login-form {
+.register {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -261,6 +266,27 @@ html {
   align-items: center;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
+}
+
+.login-form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-btn > input {
+  width: 100%;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px #000;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #000;
+  font-size: 1.1em;
 }
 
 #new_user {
