@@ -21,6 +21,35 @@ html {
   padding-top: 50px;
 }
 
+.login-btn {
+  padding: 20px;
+}
+
+.login-btn > a {
+  background-color: aquamarine;
+  padding: 10px;
+  border: 1px solid blue;
+  text-decoration: none;
+}
+
+.new-post > p {
+  padding: 10px;
+}
+
+.new-post > a {
+  text-decoration: none;
+  border: 2px solid black;
+  color: #000;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.new-post > a:hover {
+  background-color: rgb(69, 69, 69);
+  color: #fff;
+}
+
 .home-page {
   width: 100%;
 }
@@ -197,25 +226,7 @@ html {
   gap: 1em;
 }
 
-.new-post > p {
-  padding: 10px;
-}
-
-.new-post > a {
-  text-decoration: none;
-  border: 2px solid black;
-  color: #000;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 1px 1px 1px 1px black;
-}
-
-.new-post > a:hover {
-  background-color: rgb(69, 69, 69);
-  color: #fff;
-}
-
-/* 
+/*
   Create Post
 */
 .create-post {
@@ -237,7 +248,7 @@ html {
   cursor: pointer;
 }
 
-/* 
+/*
   * Registeration form
 */
 
@@ -279,15 +290,4 @@ html {
   font-size: 1em;
   cursor: pointer;
   margin-bottom: 1em;
-}
-
-.login-btn {
-  padding: 20px;
-}
-
-.login-btn > a {
-  background-color: aquamarine;
-  padding: 10px;
-  border: 1px solid blue;
-  text-decoration: none;
 }
