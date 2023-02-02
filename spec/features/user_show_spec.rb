@@ -21,52 +21,23 @@ RSpec.describe '#UserIndex', type: :feature do
         posts_counter: 0
       )
     ]
-    @posts = [
-      post1 = Post.create(
-        author: @user1,
-        title: 'Hello Post',
-        text: 'This is my first post',
-        comments_counter: 0,
-        likes_counter: 0
-      ),
-      post2 = Post.create(
-        author: @user1,
-        title: 'Football',
-        text: 'This is my second post',
-        comments_counter: 0,
-        likes_counter: 0
-      ),
-      post3 = Post.create(
-        author: @user1,
-        title: 'Current Affairs',
-        text: 'This is my third post',
-        comments_counter: 0,
-        likes_counter: 0
-      ),
-      post4 = Post.create(
-        author: @user1,
-        title: 'Microverse',
-        text: 'This is my fourth post',
-        comments_counter: 0,
-        likes_counter: 0
-      )
-    ]
+
     visit users_path
   end
   describe '#UserShowPage' do
     it 'should display the user profile picture' do
       @users.each do |user|
-        expect(page).to have_css ("img[src='#{user.photo}']")
+        expect(page).to have_css("img[src='#{user.photo}']")
       end
     end
     it 'should display the name of the user' do
       @users.each do |user|
-        expect(page).to have_content (user.name)
+        expect(page).to have_content(user.name)
       end
     end
     it 'should display the number of posts' do
       @users.each do |user|
-        expect(page).to have_content (user.posts_counter)
+        expect(page).to have_content(user.posts_counter)
       end
     end
     it 'should see the first 3 posts of the user' do
@@ -74,12 +45,11 @@ RSpec.describe '#UserIndex', type: :feature do
         expect(page).to have_content(post.title)
       end
     end
-    it 'should display the user bio' do
-      # expect(page).to have_content(@users.first.bio)
-    end
-    it 'should display view all posts buttons' do
-      # expect(page).to have_link('See all posts', href: user_posts_path(@users.first))
-      # expect(page).to have_button('View all posts')
+
+    describe 'GET /index' do
+      it 'has a link to user show page' do
+        expect(page).to have_selector("a[href='#{user_path(@user1.id)}']")
+      end
     end
   end
 end

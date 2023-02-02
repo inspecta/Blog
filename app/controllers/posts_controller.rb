@@ -7,7 +7,6 @@ class PostsController < ApplicationController
   def show
     author_id = params[:user_id]
     post_id = params[:id]
-
     @user = User.find(author_id)
     @post = @user.posts.includes(:comments, :likes).find(post_id)
   end
