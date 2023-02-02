@@ -34,14 +34,6 @@ html {
   color: #000;
 }
 
-.login-btn > a:hover {
-  background-color: rgb(217, 217, 217);
-}
-
-.new-post > p {
-  padding: 10px;
-}
-
 .new-post > a {
   text-decoration: none;
   border: 2px solid black;
@@ -49,6 +41,14 @@ html {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 1px 1px 1px 1px black;
+}
+
+.login-btn > a:hover {
+  background-color: rgb(217, 217, 217);
+}
+
+.new-post > p {
+  padding: 10px;
 }
 
 .new-post > a:hover {
