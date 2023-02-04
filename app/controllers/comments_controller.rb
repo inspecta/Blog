@@ -16,6 +16,8 @@ class CommentsController < ApplicationController
     end
   end
 
+  # Delete a comment
+
   private
 
   def comment_params

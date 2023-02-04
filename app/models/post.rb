@@ -9,6 +9,7 @@ class Post < ApplicationRecord
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   after_save :update_posts_counter
+  after_destroy :decrement_author_posts_counter
 
   def update_posts_counter
     author.increment!(:posts_counter)
@@ -16,5 +17,9 @@ class Post < ApplicationRecord
 
   def most_recent_comments
     comments.includes(:author).order(id: :desc).limit(5)
+  end
+
+  def decrement_author_posts_counter
+    author.decrement!(:posts_counter)
   end
 end
