@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     if post.destroy
-      flash[:notice] = "Post was successfully deleted"
+      flash[:notice] = 'Post was successfully deleted'
       redirect_to user_posts_path
     else
       puts "Couldn't delete post"
@@ -46,5 +46,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text)
   end
-
 end
