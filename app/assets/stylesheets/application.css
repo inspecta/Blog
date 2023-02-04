@@ -43,6 +43,10 @@ html {
   box-shadow: 1px 1px 1px 1px black;
 }
 
+.post-info > a {
+  text-decoration: none;
+}
+
 .login-btn > a:hover {
   background-color: rgb(217, 217, 217);
 }
@@ -185,10 +189,6 @@ html {
 .post-info {
   width: 70%;
   margin: auto;
-}
-
-.post-info > a {
-  text-decoration: none;
 }
 
 .post-container {
