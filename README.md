@@ -146,27 +146,24 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Author1**
 
 - GitHub: [@inspecta](https://github.com/inspecta)
 - Twitter: [@djmulinde](https://twitter.com/djmulinde)
 - LinkedIn: [mulinde-derrick](https://linkedin.com/in/mulinde-derrick)
 
-
 👤 **Author2**
 
 - GitHub: [@Piercel2022](https://github.com/Piercel2022)
 - Twitter: [@pier_celestin](https://twitter.com/pier_celestin)
 - LinkedIn: [piercelestinmax](https://linkedin.com/in/piercelestinmax)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **A better graphical user interface**
 - [ ] **A signup functionality**
@@ -188,8 +185,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project, go ahead and give it a star. It is very much appreciated.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -198,7 +193,6 @@ If you like this project, go ahead and give it a star. It is very much appreciat
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank Microverse for providing me with the reading material that helped me during this project development.
 
@@ -207,8 +201,6 @@ I would like to thank Microverse for providing me with the reading material that
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **Can I reuse this projects' code?**
 
@@ -226,6 +218,3 @@ I would like to thank Microverse for providing me with the reading material that
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>

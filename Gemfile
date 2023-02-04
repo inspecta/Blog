@@ -12,6 +12,8 @@ gem 'sprockets-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
+gem 'rubocop', '>= 1.0', '< 2.0'
+
 # Add devise gem for session and account management
 gem 'devise'
 
