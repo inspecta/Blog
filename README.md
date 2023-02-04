@@ -154,6 +154,12 @@ Example:
 - Twitter: [@djmulinde](https://twitter.com/djmulinde)
 - LinkedIn: [mulinde-derrick](https://linkedin.com/in/mulinde-derrick)
 
+
+👤 **Author2**
+
+- GitHub: [@Piercel2022](https://github.com/Piercel2022)
+- Twitter: [@pier_celestin](https://twitter.com/pier_celestin)
+- LinkedIn: [piercelestinmax](https://linkedin.com/in/piercelestinmax)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
