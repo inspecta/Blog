@@ -43,6 +43,10 @@ html {
   box-shadow: 1px 1px 1px 1px black;
 }
 
+.post-info > a {
+  text-decoration: none;
+}
+
 .login-btn > a:hover {
   background-color: rgb(217, 217, 217);
 }
@@ -201,25 +205,20 @@ html {
   margin-top: 10px;
 }
 
-.comment a:link {
+.comment a:link,
+.like-btn {
   text-decoration: none;
-  background-color: rgb(41, 162, 255);
+  box-shadow: 1px 1px 1px 1px #000;
   padding: 10px;
   border-radius: 5px;
   color: #000;
-}
-
-.like-btn {
-  background-color: aquamarine;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.like-btn:hover {
-  background-color: rgb(0, 255, 170);
-  color: rgb(56, 56, 56);
+.like-btn:hover,
+.comment a:link:hover {
+  background-color: rgb(224, 224, 224);
 }
 
 .new-post {

@@ -14,8 +14,16 @@
   </div>
 
   <div class="post-comments border">
-    <% @post.comments.each do |comment| %>
-      <p><%= comment.author.name %>: <%= comment.text %></p>
+    <% if @post.comments.empty? %>
+      <p>No comments.</p>
+    <% else %>
+      <% @post.comments.each do |comment| %>
+        <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% if can? :destroy, @post %>
+          <%= button_to 'Delete Comment', user_post_comment_path(@user, @post, comment),
+          method: :delete, data: { confirm: "Are you sure?"} %>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 
@@ -29,6 +37,14 @@
         <%= form.submit "Like", class:"like-btn"%>
       <% end %>
     </div>
+
+    <div>
+      <% if can? :destroy, @post %>
+        <%= button_to "Delete Post", user_post_path(@user.id), method: :delete, data: { confirm: "Delete?" } %>
+      <% end %>
+    </div>
   </div>
+
+  <p><%= link_to 'Back', user_path(@user.id) %></p>
 
 </div>
