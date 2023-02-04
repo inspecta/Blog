@@ -3,21 +3,21 @@
 
   <div class="post-info">
     <% @user.posts.each do |post| %>
-      <%= render partial: "users/user_post_card", locals: {post: post} %>
-
-      <div class="comments border">
-        <% post.most_recent_comments.each do |comment| %>
-          <p><%= comment.author.name %>: <%= comment.text %></p>
-        <% end %>
-      </div>
+      <%= link_to user_post_path(@user.id, post.id) do %>
+        <%= render partial: "users/user_post_card", locals: {post: post} %>
+      <% end %>
     <% end %>
   </div>
 </div>
 
 <div class="new-post">
-  <p>Add a new post</p>
+  <p>Add another post</p>
   <%= link_to 'Add New', new_user_post_url(@user) %>
 </div>
+
+<p>
+  <%= link_to 'Go Back', user_path(@user.id) %>
+</p>
 
 <div>
     <p class="pagination">Pagination</p>

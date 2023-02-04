@@ -15,6 +15,9 @@ gem 'pg', '~> 1.1'
 # Add devise gem for session and account management
 gem 'devise'
 
+# Add authorization gem
+gem 'cancancan'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
