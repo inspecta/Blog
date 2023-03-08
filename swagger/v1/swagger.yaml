@@ -1,0 +1,82 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  api/users/{id}:
+    get:
+      summary: Retrieves user details
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  photo:
+                    type: text
+                  bio:
+                    type: string
+                  posts_counter:
+                    type: integer
+                required:
+                - name
+                - photo
+                - bio
+                - posts_counter
+        '404':
+          description: user not found
+  api/users/{id}/posts:
+    post:
+      summary: Add a post
+      tags:
+      - Posts
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  title:
+                    type: string
+                  text:
+                    type: string
+                  comments_counter:
+                    type: integer
+                  likes_counter:
+                    type: integer
+                  author_id:
+                    type: integer
+                required:
+                - title
+                - text
+                - comments_counter
+                - likes_counter
+                - author_id
+        '404':
+          description: user not found
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

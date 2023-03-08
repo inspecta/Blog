@@ -64,6 +64,9 @@ group :development, :test do
 
   # Add database cleaner
   gem 'database_cleaner'
+
+  # API documentation
+  gem 'rswag'
 end
 
 group :development do
