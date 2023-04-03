@@ -1,16 +1,18 @@
 <div class="user-show-post">
   <%= render partial: "user_info", locals: {user: @user} %>
-  <div class="bio-post">
-    <div class="border bio">
-      <h3>Bio</h3>
-      <p class="bio-text">
+  <div class="w-3/4 mx-auto border-none">
+    <div class="pt-4 pb-4">
+      <h3 class="uppercase text-[1.5em]">Bio</h3>
+      <p class="italic text-gray-600">
         <%= @user.bio %>
       </p>
     </div>
 
-    <div class="user-posts">
+    <div class="">
       <% if @user.posts.empty? %>
-        <p>No posts at the moment!</p>
+      <div class="text-center p-4 bg-gray-100 mb-4 rounded-md">
+        <p class="text-gray-400">No posts at the moment!</p>
+      </div>
       <% else %>
         <% @user.most_recent_posts.each do |post| %>
           <%= link_to user_post_path(@user.id, post.id) do %>
@@ -21,7 +23,7 @@
     </div>
   <div>
   
-  <div class="all-posts">
+  <div class="w-2/4 text-center bg-blue-200 mb-4 hover:text-gray-50 hover:bg-blue-600">
     <% if @user.posts_counter > 5 %>
       <%= link_to user_posts_path(@user.id) do %>
         <p class="see-all-posts">See all posts</p>
@@ -30,14 +32,20 @@
   </div>
 
   <% if current_user.id == @user.id %>
-    <div class="new-post">
-      <p>Add a new post</p>
-      <%= link_to 'Add New', new_user_post_url(@user) %>
+    <div class="flex flex-row items-center gap-5 mb-5">
+      <%= 
+        link_to 'Create Post',
+        new_user_post_url(@user),
+        class: "
+          text-blue-600 px-4 py-2 bg-blue-200 border-none rounded-md
+          hover:text-gray-50 hover:bg-blue-600
+        "
+      %>
     </div>
   <% end %>
 
-  <p>
-    <%= link_to 'Back', users_url %>
-  </p>
+  <div class="">
+    <%= link_to 'Back', users_url, class: "bg-gray-400 px-5 py-2 rounded hover:text-gray-50 hover:bg-gray-600" %>
+  </div>
 
 </div>

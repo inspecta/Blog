@@ -1,11 +1,11 @@
-<div class="user-post-card">
-  <h3>Post #<%= post.id %></h3>
+<div class="border-none p-4 mb-4 bg-blue-200 rounded-md">
+  <h3 class="mb-2 text-blue-900">Post #<%= post.id %></h3>
   <div>
-    <h4><%= post.title %></h4>
-    <p><%= post.text %></p>
+    <h4 class="uppercase text-blue-600 font-semibold"><%= post.title %></h4>
+    <p class="text-gray-800 mb-3"><%= post.text %></p>
     <div>
-      <span>Comments: <%= post.comments_counter %></span>
-      <span>Likes: <%= post.likes_counter %></span>
+      <span class="text-gray-500 pr-3 italic">Comments: <%= post.comments_counter %></span>
+      <span class="text-gray-500 italic">Likes: <%= post.likes_counter %></span>
     </div>
   </div>
 </div>

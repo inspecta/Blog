@@ -11,7 +11,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="body bg-blue-100">
+  <body class="
+    w-3/4 h-screen flex flex-col items-center justify-center bg-blue-100 mx-auto
+  ">
+    <% if notice %>
+      <p class="border-green-50 text-gray-50 bg-green-400 rounded-md px-6 py-2 mt-10">
+        <%= notice %>
+      </p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
