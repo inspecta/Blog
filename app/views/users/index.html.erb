@@ -1,5 +1,6 @@
 <div class="home-page">
-  <h1 class="header">The Blog</h1>
+  <h1 class="header uppercase text-4xl mb-2">Welcome </h1>
+  <p class="text-center mb-4">List of all available users.</p>
   <% @users.each do |user| %>
     <%= link_to user_path(user.id) do %>
       <%= render partial: 'user_info', locals: { user: user } %>

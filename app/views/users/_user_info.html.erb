@@ -1,14 +1,18 @@
-<div class="user-home">
-  <div class="user-photo border">
-    <%= image_tag(user.photo, :alt => "User profile photo.", :class => "display-photo") %>
+<div class="user-home bg-blue-200 p-2 rounded-lg hover:bg-gray-100">
+  <div class="rounded-md">
+    <%= 
+      image_tag(user.photo,
+      :alt => "User profile photo.",
+      :class => "display-photo rounded-2xl")
+    %>
   </div>
 
-  <div class="user-details border">
-    <h1 class="username">
+  <div class="w-1/2 flex flex-col items-start justify-center">
+    <h1 class="username uppercase text-xl text-blue-600 xs:text-[10px]">
       <%= user.name %>
     </h1>
-    <p class="no-of-posts">
-      Number of posts: <%= user.posts_counter %>
+    <p class="text-blue-400">
+      No of posts: <%= user.posts_counter %>
     </p>
   </div>
 </div>
