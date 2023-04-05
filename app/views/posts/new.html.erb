@@ -1,33 +1,54 @@
-<div class="create-post">
-  <h2>Create a new post</h2>
+<div class="flex flex-col gap-3 mx-auto w-full">
+  <h2 class="uppercase text-blue-600 text-center">Create a new post</h2>
 
-  <span>
+  <div class="w-2/3 mx-auto">
     <% @post.errors.full_messages_for(:title).each do |msg| %>
-      <li><%= msg %></li>
+      <li class="bg-red-400 px-4 py-2 text-white list-none rounded-md">
+        <%= msg %>
+      </li>
     <% end %>
-  </span>
-  <span>
+  </div>
+  <div class="w-1/2 mx-auto">
     <% @post.errors.full_messages_for(:text).each do |msg| %>
-      <li><%= msg %></li>
+      <li class="bg-red-400 px-4 py-2 text-white list-none rounded-md">
+        <%= msg %>
+      </li>
     <% end %>
-  </span>
+  </div>
 
   <%= form_with model: @post, url: user_posts_path do |form| %>
-    <div class="field">
+    <div class="flex flex-col gap-2 mb-3">
       <%= form.label :title%>
-      <%= form.text_field :title, placeholder: "Enter title...", required: true %>
+      <%= 
+        form.text_field :title,
+        placeholder: "Enter title...",
+        required: true,
+        class: "border-none rounded-md placeholder-gray-500 w-full"
+      %>
     </div>
 
-    <div class="field">
+    <div class="flex flex-col gap-2 mb-3">
       <%= form.label :text, "Write post:" %>
-      <%= form.text_area :text, class: "post-text", required: true %>
+      <%=
+        form.text_area :text,
+        class: "border-none rounded-md w-full",
+        placeholder: "Write post...",
+        required: true
+      %>
     </div>
 
-    <div class="add-post-btn">
-      <%= form.submit  "Create Post" %>
+    <div>
+      <%= form.submit  "Create Post", class: "text-blue-600 text-center px-4 py-2 bg-blue-200 border-none rounded-md
+      hover:text-gray-50 hover:bg-blue-600 mb-4 cursor-pointer" %>
+    </div>
+
+    <div class="w-full">
+      <%= 
+        link_to 'Go Back', user_path(current_user.id),
+        class: "bg-gray-400 px-5 py-2 rounded hover:text-gray-50 hover:bg-gray-600" 
+      %>
     </div>
   <% end %>
 
-  <p><%= link_to 'Go Back', user_path(current_user.id) %></p>
 
 </div>

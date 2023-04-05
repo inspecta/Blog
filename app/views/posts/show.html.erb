@@ -1,50 +1,81 @@
-<div class="post-container">
-  <div class="post-details border">
-    <div class="post-header">
-      <h3>
-        Post #<%= @post.id %> by <%= @user.name %>
+<div class="border-none flex flex-col gap-4 w-3/4">
+  <% if notice %>
+    <p class="border-green-50 text-white bg-green-400 rounded-md px-6 py-2 mb-4 text-center">
+      <%= notice %>
+    </p>
+  <% end %>
+  <div class="w-full mb-4 bg-blue-200 px-4 py-2 rounded-md">
+    <div class="flex flex-col gap-3">
+      <h3 class="text-gray-400">
+        Post #<%= @post.id %>
       </h3>
       <p>
-        Comments: <%= @post.comments_counter %> , Likes: <%= @post.likes_counter %>
+        <%= @post.text %>
       </p>
-    </div>
-    <p>
-      <%= @post.text %>
-    </p>
+      <p class="italic text-gray-500 text-sm">
+        <span>Comments: <%= @post.comments_counter %><span>
+        <span>Likes: <%= @post.likes_counter %></span>
+      </p>
+
+      <p><span class="capitalize text-blue-800 italic">Author: </span><%= @user.name %></p>
+      </div>
   </div>
 
-  <div class="post-comments border">
+  <div class="w-full">
     <% if @post.comments.empty? %>
-      <p>No comments.</p>
+      <p class="bg-gray-300 px-4 py-2 rounded-md text-gray-800">No comments.</p>
     <% else %>
       <% @post.comments.each do |comment| %>
         <p><%= comment.author.name %>: <%= comment.text %></p>
         <% if can? :destroy, @post %>
-          <%= button_to 'Delete Comment', user_post_comment_path(@user, @post, comment),
-          method: :delete, data: { confirm: "Are you sure?"} %>
+          <%=
+            button_to 'Delete Comment',
+            user_post_comment_path(@user, @post, comment),
+            method: :delete, data: { confirm: "Are you sure?"}
+          %>
         <% end %>
       <% end %>
     <% end %>
   </div>
 
-  <div class="comment-like">
-    <div class="comment">
-      <%= link_to 'Comment', new_user_post_comment_path(@user, @post) %>
-    </div>
+  <div class="">
+    <div class="">
+      <%=
+        link_to 'Comment',
+        new_user_post_comment_path(@user, @post),
+        class: "text-blue-600 px-4 py-2 bg-blue-200 border-none rounded-md
+          hover:text-gray-50 hover:bg-blue-600"
+      %>
+    </div> <br/>
     
-    <div>
+    <div class="flex flex-row gap-4">
       <%= form_with url: user_post_likes_path(@post.author, @post), method: :post do |form| %>
-        <%= form.submit "Like", class:"like-btn"%>
+        <%= 
+          form.submit "Like",
+          class:"bg-green-400 px-4 py-1 rounded-md text-gray-50 cursor-pointer hover:text-gray-600"
+        %>
       <% end %>
+      <div>
+        <% if can? :destroy, @post %>
+          <%=
+            button_to "Delete Post",
+            user_post_path(@user.id),
+            method: :delete, data: { confirm: "Delete?" },
+            class: "text-red-600 px-4 py-1 bg-red-200 border-none rounded-md
+              hover:text-gray-50 hover:bg-red-600"  
+          %>
+        <% end %>
+      </div>
     </div>
 
-    <div>
-      <% if can? :destroy, @post %>
-        <%= button_to "Delete Post", user_post_path(@user.id), method: :delete, data: { confirm: "Delete?" } %>
-      <% end %>
-    </div>
   </div>
 
-  <p><%= link_to 'Back', user_path(@user.id) %></p>
+  <p>
+    <%=
+      link_to 'Back',
+      user_path(@user.id),
+      class: "bg-gray-400 px-5 py-2 rounded hover:text-gray-50 hover:bg-gray-600"
+    %>
+  </p>
 
 </div>

@@ -10,9 +10,18 @@
 
     <div class="">
       <% if @user.posts.empty? %>
-      <div class="text-center p-4 bg-gray-100 mb-4 rounded-md">
+      <div class="text-center p-4 bg-gray-100 mb-5 rounded-md">
         <p class="text-gray-400">No posts at the moment!</p>
-      </div>
+        </div>
+
+        <div>
+          <%=
+            link_to 'Create new post',
+            new_user_post_path(@user),
+            class: "text-blue-600 px-4 py-3 bg-blue-200 border-none rounded-md
+              hover:text-gray-50 hover:bg-blue-600"
+          %>
+        </div>
       <% else %>
         <% @user.most_recent_posts.each do |post| %>
           <%= link_to user_post_path(@user.id, post.id) do %>
@@ -44,7 +53,7 @@
     </div>
   <% end %>
 
-  <div class="">
+  <div>
     <%= link_to 'Back', users_url, class: "bg-gray-400 px-5 py-2 rounded hover:text-gray-50 hover:bg-gray-600" %>
   </div>
 
