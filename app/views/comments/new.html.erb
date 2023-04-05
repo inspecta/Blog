@@ -1,10 +1,15 @@
-<div class="add-new-comment">
-  <h3>Add comments</h3>
+<div class="w-full">
+  <h3 class="text-center text-blue-600 mb-4">Comment on Post</h3>
 
   <%= form_with model: @comment, url: user_post_comments_path do |form| %>
     <div>
-      <%= form.label :comment %><br/>
-      <%= form.text_area :text, required: true %>
+      <%= 
+        form.text_area :text, 
+        placeholder: 'Write comment',
+        class: "border-none rounded-md w-full mb-4",
+        rows: 5,
+        required: true 
+      %>
 
       <ul>
       <% @post.errors.full_messages_for(:text).each do |msg| %>
@@ -13,8 +18,19 @@
     </ul>
     </div>
 
-    <div>
-      <%= form.submit "Submit" %>
+    <div class="text-center">
+      <%=
+        form.submit "Submit",
+        class: "text-blue-600 text-center px-4 py-2 bg-blue-200 border-none rounded-md
+          hover:text-gray-50 hover:bg-blue-600 mb-4 cursor-pointer"  
+      %>
+    </div>
+
+    <div class="w-full">
+      <%= 
+        link_to 'Go Back', user_path(current_user.id),
+        class: "bg-gray-400 px-5 py-2 rounded hover:text-gray-50 hover:bg-gray-600" 
+      %>
     </div>
 
   <% end %>

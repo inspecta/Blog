@@ -18,7 +18,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 50px;
+  height: 90vh;
 }
 
 .login-btn {
@@ -68,23 +68,8 @@ html {
   text-decoration: none;
 }
 
-.user-home {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 70%;
-  gap: 2em;
-  padding-bottom: 10px;
-  margin: auto;
-}
-
 .display-photo {
   width: 100px;
-}
-
-.username,
-.no-of-posts {
-  color: black;
 }
 
 .all-posts {
@@ -187,7 +172,7 @@ html {
 }
 
 .post-info {
-  width: 70%;
+  width: 75%;
   margin: auto;
 }
 

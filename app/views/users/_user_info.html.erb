@@ -1,14 +1,22 @@
-<div class="user-home">
-  <div class="user-photo border">
-    <%= image_tag(user.photo, :alt => "User profile photo.", :class => "display-photo") %>
+<div class="
+  flex flex-row justify-center gap-3 w-3/4 mx-auto mb-[10px] h-auto
+  bg-blue-200 p-2 rounded-lg hover:bg-gray-100 sm:flex sm:flex-col sm:gap-2
+  md:flex md:flex-row md:gap-3
+  ">
+  <div class="rounded-md">
+    <%= 
+      image_tag(user.photo,
+      :alt => "User profile photo.",
+      :class => "display-photo rounded-2xl")
+    %>
   </div>
 
-  <div class="user-details border">
-    <h1 class="username">
+  <div class="w-1/2 flex flex-col items-start justify-center">
+    <h1 class="username uppercase text-xl text-blue-600 xs:text-[15px] md:text-[15px] lg:text-[20px]">
       <%= user.name %>
     </h1>
-    <p class="no-of-posts">
-      Number of posts: <%= user.posts_counter %>
+    <p class="text-gray-600">
+      No of posts: <%= user.posts_counter %>
     </p>
   </div>
 </div>

@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = Post.new(author_id: current_user.id, **post_params, comments_counter: 0, likes_counter: 0)
 
     if @post.save
-      flash[:success] = 'Post was successfully created.'
+      flash[:notice] = 'Post was successfully created.'
       redirect_to "/users/#{@post.author_id}/posts/"
     else
       flash.now[:error] = 'Oops. Something went wrong'
