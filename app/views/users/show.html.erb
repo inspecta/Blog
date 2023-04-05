@@ -11,16 +11,7 @@
     <div class="">
       <% if @user.posts.empty? %>
       <div class="text-center p-4 bg-gray-100 mb-5 rounded-md">
-        <p class="text-gray-400">No posts at the moment!</p>
-        </div>
-
-        <div>
-          <%=
-            link_to 'Create new post',
-            new_user_post_path(@user),
-            class: "text-blue-600 px-4 py-3 bg-blue-200 border-none rounded-md
-              hover:text-gray-50 hover:bg-blue-600"
-          %>
+        <p class="text-gray-400">No posts for user!</p>
         </div>
       <% else %>
         <% @user.most_recent_posts.each do |post| %>
