@@ -6,8 +6,8 @@
   <% end %>
   <div class="w-full mb-4 bg-blue-200 px-4 py-2 rounded-md">
     <div class="flex flex-col gap-3">
-      <h3 class="text-gray-400">
-        Post #<%= @post.id %>
+      <h3 class="text-blue-800 uppercase text-2xl">
+        <%= @post.title %>
       </h3>
       <p>
         <%= @post.text %>
@@ -26,14 +26,18 @@
       <p class="bg-gray-300 px-4 py-2 rounded-md text-gray-800">No comments.</p>
     <% else %>
       <% @post.comments.each do |comment| %>
-        <p><%= comment.author.name %>: <%= comment.text %></p>
-        <% if can? :destroy, @post %>
-          <%=
-            button_to 'Delete Comment',
-            user_post_comment_path(@user, @post, comment),
-            method: :delete, data: { confirm: "Are you sure?"}
-          %>
-        <% end %>
+        <div class="flex gap-5">
+          <p><%= comment.author.name %>: <%= comment.text %></p>
+            <% if can? :destroy, @post %>
+              <%=
+                button_to 'DEL',
+                user_post_comment_path(@user, @post, comment),
+                method: :delete, data: { confirm: "Are you sure?"},
+                class: "bg-red-200 text-sm px-2 rounded-md text-red-600 
+                  hover:bg-red-600 hover:text-gray-50"       
+              %>
+            <% end %>
+        </div>
       <% end %>
     <% end %>
   </div>
@@ -41,7 +45,7 @@
   <div class="">
     <div class="">
       <%=
-        link_to 'Comment',
+        link_to 'New comment',
         new_user_post_comment_path(@user, @post),
         class: "text-blue-600 px-4 py-2 bg-blue-200 border-none rounded-md
           hover:text-gray-50 hover:bg-blue-600"
