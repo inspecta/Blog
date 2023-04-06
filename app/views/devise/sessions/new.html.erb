@@ -1,19 +1,49 @@
-<div class="login-form">
-
+<div class="w-full flex flex-col justify-center items-center mx-auto">
+  <h1 class="uppercase text-center text-4xl text-blue-800 mb-6 underline">Blog</h1>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.email_field :email, autofocus: true,
-      autocomplete: "email", placeholder: "Username" %>
-    </div>
+    <div class="w-full mx-auto">
+      <div class="field">
+        <div>
+          <%= f.label :email %>
+        </div>
+        <div>
+          <%=
+            f.email_field :email,
+            autocomplete: "email",
+            placeholder: "Email",
+            class: "input"
+          %>
+        </div>
+      </div>
 
-    <div class="field">
-      <%= f.password_field :password, autocomplete: "current-password",
-      placeholder: "Password" %>
-    </div>
+      <div class="field">
+        <div>
+          <%= f.label :password %>
+        </div>
+        <div>
+          <%=
+            f.password_field :password,
+            autocomplete: "current-password",
+            placeholder: "Password",
+            class: "input"
+          %>
+        </div>
+      </div>
 
-    <div class="signin-btn">
-      <%= f.submit "Log in" %>
-    </div>
+      </div>
+      <div class="mx-auto md:w-1/2 md:mx-auto">
+        <%=
+          f.submit "Log in",
+          class: "text-blue-600 text-center px-8 py-2 bg-blue-200 border-none rounded-md
+            hover:text-gray-50 hover:bg-blue-600 mb-4 cursor-pointer w-full"
+        %>
+      </div>
   <% end %>
+
+  <div class="text-blue-800 font-bold underline">
+    <p class="text-center">
+      <%= link_to "Sign up", new_user_registration_path  %>
+    </p>
+  </div>
     
 </div>

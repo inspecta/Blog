@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
+  .field {
+    @apply w-full md:grid md:grid-cols-2 md:text-center md:gap-4 md:items-center
+    md:text-xl;
+  }
+
+  .input {
+    @apply border-none rounded-md w-full mt-2 mb-2 placeholder-gray-500;
+  }
+
   .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+    @apply text-blue-600 text-center px-8 py-2 bg-blue-200 border-none rounded-md
+    hover:text-gray-50 hover:bg-blue-600 mb-4 cursor-pointer w-full;
   }
 }
-
-*/

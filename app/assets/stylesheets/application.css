@@ -277,7 +277,7 @@ input::placeholder {
   width: 70%;
 }
 
-.field {
+/* .field {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
@@ -300,4 +300,4 @@ input::placeholder {
   font-size: 1em;
   cursor: pointer;
   margin-bottom: 1em;
-}
+} */
